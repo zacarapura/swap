@@ -41,6 +41,10 @@ if ! grep -q "swap" /etc/fstab; then
 	 mkswap "$SWAP_FILE"
 	 swapon "$SWAP_FILE"	
 	echo "$SWAP_FILE   none    swap    sw    0   0" |  tee /etc/fstab -a
+	sysctl vm.swappiness=10
+	sysctl vm.vfs_cache_pressure=50
+	echo "vm.swappiness=10" |  tee /etc/sysctl.conf -a
+	echo "vm.vfs_cache_pressure=50" |  tee /etc/sysctl.conf -a
 else
 	echo 'swapfile found. No changes made.'
 fi
