@@ -9,7 +9,7 @@ Usage:
 
 Download the script using wget:
 
-`wget https://raw.githubusercontent.com/chetankapoor/swap/master/swap.sh -O swap.sh`
+`wget https://raw.githubusercontent.com/zacarapura/swap/master/swap.sh -O swap.sh`
 
 
 Then run the script with following format:
