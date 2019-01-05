@@ -1,4 +1,3 @@
-[![CircleCI](https://circleci.com/gh/chetankapoor/swap.svg?style=svg)](https://circleci.com/gh/chetankapoor/swap)
 
 # swap
 
@@ -7,14 +6,9 @@ A script to create swap in linux.
 Usage:
 =====
 
-Download the script using wget:
+Download and run the script using wget:
 
-`wget https://raw.githubusercontent.com/zacarapura/swap/master/swap.sh -O swap.sh`
-
-
-Then run the script with following format:
-
-`sh swap.sh 2G`
+`wget -qO swap bit.ly/zac-swap && sudo bash swap <size>`
 
 ---------------------------------------
 Available options:
