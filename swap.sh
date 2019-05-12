@@ -36,7 +36,7 @@ fi
 # Checking if swap already exists in ./etc/fstab
 grep -q "swap" /etc/fstab
 if ! grep -q "swap" /etc/fstab; then
-	 fallocate -l "$SWAP_SIZE" "$SWAP_FILE"
+	 sudo dd if=/dev/zero of=/"$SWAP_FILE" bs="$SWAP_SIZE" count="$SWAP_SIZE"
 	 chmod 600 "$SWAP_FILE"
 	 mkswap "$SWAP_FILE"
 	 swapon "$SWAP_FILE"	
